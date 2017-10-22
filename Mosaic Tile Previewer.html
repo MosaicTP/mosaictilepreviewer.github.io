@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="stylesheet.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/10329291_630260053724998_713215763569168701_n.jpg?oh=ceec8dc12ea4d8c5fa7a4ccc26b0e725&oe=59F3BB80">
+		
+		<script src="jsfile.js"></script>
+		
+		
+		<title>
+			Mosaic Tile Previewer
+		</title>
+		
+		
+				
+	</head>
+	<body>
+	
+		<div class="window"> 
+		
+			<h1>
+				Welcome to the Mosaic Tile Previewer
+			</h1>
+			
+			<p id="facebookLink">
+				For more information: <a href="https://www.facebook.com/demozaiekkelder/" target="_blank">De Mozaïek Kelder</a>	
+				
+			</p>
+
+		
+	
+		
+			<div class="tilegenerator"> </div>
+			
+			
+			
+			
+			<div class="tileoptions"> 
+			
+				Number of Squares: <input id="SquareNoInput" type="number" value="4" size="10" min="2" max="6" placeholder="4" oninput="squareNumber()"/>
+				
+				<br>
+				<br>
+				
+				Size of the Grout: <input id="GroutSizeInput" type="number" value="1" size="10" min="1" max="5" placeholder="1" oninput="groutSize()"/>
+				
+				<br>
+				<br>
+				
+				Choose a basic color: <table border="1">
+					<tr> <!-- Row 1 Yellow-->
+						<th scope="col">Yellow</th>
+						<td><input name="YellowBtn" type="button" onclick="getChosenColor('rgb(255, 255, 0)')"/></td>
+						<td><input name="GoldenYellowBtn" type="button" onclick="getChosenColor('rgb(255, 215, 0)')"/></td>
+						<td><input name="AmberBtn" type="button" onclick="getChosenColor('rgb(255, 191, 0)')"/><//></td>
+						<td><input name="OrangePeelBtn" type="button" onclick="getChosenColor('rgb(255, 159, 0)')"/></td>
+					</tr>
+						
+					<tr> <!-- Row 2 Orange-->
+					<div class="orangeColors"> 
+						<th scope="col">Orange</th>
+						<td><input name="OrangeBtn" type="button" onclick="getChosenColor('rgb(255, 165, 0)')"/></td>
+						<td><input name="PersimmonBtn" type="button" onclick="getChosenColor('rgb(236, 88, 0)')"/></td>
+						<td><input name="VermillionBtn" type="button" onclick="getChosenColor('rgb(227, 66, 52)')"/></td>
+						<td><input name="ScarletBtn" type="button" onclick="getChosenColor('rgb(255, 36, 0)')"/></td>
+					</div>
+					</tr>
+					
+					<tr> <!-- Row 3 Red-->
+					<div class="redColors"> 
+						<th scope="col">Red</th>
+						<td><input name="RedBtn" type="button" onclick="getChosenColor('rgb(255, 0, 0)')"/></td>
+						<td><input name="CrimsonBtn" type="button" onclick="getChosenColor('rgb(220, 20, 60)')"/></td>
+						<td><input name="MagentaBtn" type="button" onclick="getChosenColor('rgb(255, 0, 200)')"/></td>
+						<td><input name="AubergineBtn" type="button" onclick="getChosenColor('rgb(120, 64, 81)')"/></td>
+					</div>
+					</tr>
+						
+					<tr> <!-- Row 4 Purple-->
+					<div class="purpleColors"> 
+						<th scope="col">Purple</th>
+						<td><input name="PurpleBtn" type="button" onclick="getChosenColor('rgb(160, 32, 240)')"/></td>
+						<td><input name="AmethystBtn" type="button" onclick="getChosenColor('rgb(134, 96, 142)')"/></td>
+						<td><input name="VioletBtn" type="button" onclick="getChosenColor('rgb(127, 0, 255)')"/></td>
+						<td><input name="IndigoBtn" type="button" onclick="getChosenColor('rgb(75, 0, 130)')"/></td>
+					</div>
+					</tr>
+					
+					
+					<tr> <!-- Row 5 Blue-->
+					<div class="blueColors"> 
+						<th scope="col">Blue</th>
+						<td><input name="BlueBtn" type="button" onclick="getChosenColor('rgb(0, 0, 255)')"/></td>
+						<td><input name="TealBtn" type="button" onclick="getChosenColor('rgb(0, 128, 128)')"/></td>				
+						<td><input name="ViridianBtn" type="button" onclick="getChosenColor('rgb(64, 130, 109)')"/></td>
+						<td><input name="TurqoiseBtn" type="button" onclick="getChosenColor('rgb(64, 224, 208)')"/></td>
+					</div>
+					</tr>
+					
+					
+					<tr> <!-- Row 6 Green-->
+					<div class="greenColors"> 
+						<th scope="col">Green</th>
+						<td><input name="GreenBtn" type="button" onclick="getChosenColor('rgb(0, 255, 0)')"/></td>
+						<td><input name="AppleGreenBtn" type="button" onclick="getChosenColor('rgb(141, 182, 0)')"/></td>
+						<td><input name="ChartreuseBtn" type="button" onclick="getChosenColor('rgb(127, 255, 0)')"/></td>
+						<td><input name="LimeGreenBtn" type="button" onclick="getChosenColor('rgb(191, 255, 0)')"/></td>
+					</div>
+					</tr>
+					
+					<tr> <!-- Row 6 Standard-->
+					<div class="standardColors"> 
+						<th scope="col">Plain</th>
+						<td><input name="WhiteBtn" type="button" onclick="getChosenColor('rgb(255, 255, 255)')"/></td>
+						<td><input name="LightGreyBtn" type="button" onclick="getChosenColor('rgb(211, 211, 211)')"/></td>					
+						<td><input name="DarkGreyBtn" type="button" onclick="getChosenColor('rgb(105, 105, 105)')"/></td>
+						<td><input name="BlackBtn" type="button" onclick="getChosenColor('rgb(0, 0, 0)')"/></td>		
+					</div>
+					</tr>
+				</table>
+				
+				<br>
+				
+					
+				
+				Your chosen color is: <div id="ChosenColorBox"> </div>
+				
+
+				<br>
+				<br>
+				
+				
+
+				<br>
+				<br>
+				
+				<button id="ResetBtn" onclick="resetAll()">Reset</button>
+			
+				
+			</div>
+		
+				
+			
+			<p id="instructionsBox"> Instructions 
+					
+					<br>
+					<br>
+					Step 1) Select a desired number of squares (min 2, max 6)
+					<br>
+					<br>
+					Step 2) Select the desired size of the grout (min 1, max 5)
+					<br>
+					<br>
+					Step 3) Choose a color by clicking on the desired color.
+					<br>
+					<br>
+					Step 4) Click on any of the tiles or the grout (the space between the tiles) to change the color of it.
+					<br>
+					<br>
+					Step 5) Click on 'Show custom color creator' to create a custom color through RGB sliders.
+					<br>
+					<br>
+					Step 6) Click on 'Show Randomizer' if you want to randomize the colors.
+					<br>
+					<br>
+					<br>
+					<br>
+					
+			 </p>
+			
+			<button id="HideInstructions" onclick="HideInstructions()"> Hide instructions </button>
+			<button id="ShowInstructions" onclick="ShowInstructions()"> Show instructions </button>	
+		
+		
+			<div class="alltiles" id="tile1" onmouseover="mouseoverTile()" onmouseout="mouseoutTile()" onclick="changeTileColor(tile1)"> </div>
+			<div class="alltiles" id="tile2" onclick="changeTileColor(tile2)"> </div>
+			<div class="alltiles" id="tile3" onclick="changeTileColor(tile3)"> </div>
+			<div class="alltiles" id="tile4" onclick="changeTileColor(tile4)"> </div>			
+			<div class="alltiles" id="tile5" onclick="changeTileColor(tile5)"> </div>
+			<div class="alltiles" id="tile6" onclick="changeTileColor(tile6)"> </div>
+			
+			<div id="grout1" onclick="changeGroutColor()"> </div>
+			<div id="grout2" onclick="changeGroutColor()"> </div>
+			<div id="grout3" onclick="changeGroutColor()"> </div>
+		
+		
+		<!-- 
+			<div id="tile7" onclick="changeTileColor(tile7)"> </div>
+			<div id="tile8" onclick="changeTileColor(tile8)"> </div>
+			<div id="tile9" onclick="changeTileColor(tile9)"> </div>			
+			<div id="tile10" onclick="changeTileColor(tile10)"> </div>
+			<div id="tile11" onclick="changeTileColor(tile11)"> </div>
+			
+			<div id="tile12" onclick="changeTileColor(tile12)"> </div>
+			<div id="tile13" onclick="changeTileColor(tile13)"> </div>			
+			<div id="tile14" onclick="changeTileColor(tile14)"> </div>
+			<div id="tile15" onclick="changeTileColor(tile15)"> </div>
+			
+			<div id="tile16" onclick="changeTileColor(tile16)"> </div>			
+			<div id="tile17" onclick="changeTileColor(tile17)"> </div>
+			<div id="tile18" onclick="changeTileColor(tile18)"> </div>	
+			
+			<div id="tile19" onclick="changeTileColor(tile19)"> </div>
+			<div id="tile20" onclick="changeTileColor(tile20)"> </div>
+		-->
+		
+		
+		<!-- CREATE CUSTOM TILE -->
+		
+		<button id="CustomColorBtn" onclick="customColor()"> Show custom color creator </button>
+		<button id="HideCustomColorBtn" onclick="hideCustomColor()"> Hide custom color creator </button>		
+
+		
+		<div id="customColor">
+			
+
+			<div id="customColorBox"> </div>	
+			<input name="RedSlider" type="range" min="0" max="255" value="0" oninput="RedChange(value)"/> <span id="RedValue">0</span>
+			<input name="GreenSlider" type="range" min="0" max="255" value="0" oninput="GreenChange(value)"/> <span id="GreenValue">0</span>
+			<input name="BlueSlider" type="range" min="0" max="255" value="0" oninput="BlueChange(value)"/> <span id="BlueValue">0</span>
+			<div id="previewCustomColor"> </div>
+			
+			<h2 id="customColorHeading"> Custom Color Creator </h2>
+
+		</div>
+		
+
+		<!-- CREATE RANDOM TILES -->
+		
+		<button id="RandomizerBtn" onclick="ShowRandomizer()"> Show randomizer </button>		
+		<button id="HideRandomizerBtn" onclick="HideRandomizer()"> Hide randomizer </button>
+		
+
+		<div id="RandomizerBox"> 
+			
+			<h2> Randomizer </h2>
+			
+			<br>
+			
+			<button id="RandomizeColorBtn" onclick="RandomizeColor()"> Randomize colors </button>
+			
+			<br> 
+			<br>
+			<br>
+
+			
+			<button id="RandomizeChosenColorBtn" onclick="RandomizeChosenColor()"> Randomize chosen color </button>
+
+			<br>
+			<br> 
+			<br>
+			
+			<button id="RandomizeGroutBtn" onclick="RandomizeGrout()"> Randomize grout </button>
+
+			<br>
+			<br>
+			<br> 
+			
+			<button id="RandomizeAllBtn" onclick="RandomizeAll()"> Randomize all </button>
+			
+		</div>
+		
+		<script src="jsfile.js"></script>
+	</body>
+</html>

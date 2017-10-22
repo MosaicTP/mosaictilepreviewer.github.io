@@ -1,0 +1,513 @@
+* {
+	font-family: sans-serif
+}
+
+.window {
+	position:relative;
+	width:1300px;
+	height:900px;
+	margin:auto;
+}
+
+/* body { 
+	background-image: url("https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/10365746_630265797057757_4471928942263734815_n.png?oh=a31d7979c113c1b163e1d6ddf9325996&oe=59F4FD55");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+*/
+
+h1 {
+	text-align: center;
+}
+
+h3 {
+	font-weight:700;
+	text-decoration:underline;
+	position:relative;
+	top:480;
+	text-align:center;
+	
+} 
+
+#facebookLink {
+	text-align: center;
+}
+
+
+
+#ShowInstructions {
+	position:absolute;
+	top:315px;
+	left:80px;
+	visibility:hidden;
+
+}
+
+#HideInstructions {
+	position:absolute;
+	top:560px;
+	left:80px;
+	visibility:visible;
+}
+
+#instructionsBox {
+	text-align:center;
+	position:absolute;
+	border:1px solid black;
+	width:300px;
+	height:411px;
+	margin:auto;
+	padding:15px;
+	top: 103px;
+	right: 1000px;
+}
+
+
+
+.tilegenerator {
+	width:400px;
+	height:440px;
+	position:absolute;
+	left:425px;
+}
+
+
+.tileoptions {
+	width:200px;
+	height:442px;
+	border:1px solid black;
+	position:absolute;
+	right:26%;
+	top:103px;
+	box-sizing: border-box;
+	margin-right:2px;
+	padding-top: 8px;
+	padding-left: 8px;
+	font-weight:100;
+}
+
+#tile1 {
+	position:absolute;
+	top:103px;
+	left:322px;
+	width:200px;
+	height:220px;
+	border: 1px solid black;
+	
+}
+
+#tile2 {
+	position:absolute;
+	top:103px;
+	left:523px;
+	width:200px;
+	height:220px;
+	border:1px solid black;
+	
+}
+
+#tile3 {
+	position:absolute;
+	top:324px;
+	left:322px;
+	width:200px;
+	height:220px;
+	border:1px solid black;
+}
+
+#tile4 {
+	position:absolute;
+	top:324px;
+	left:523px;
+	width:200px;
+	height:220px;
+	border:1px solid black;
+}
+
+#tile5 {
+	position:absolute;
+	top:396px;
+	left:322px;
+	width:200px;
+	height:147px;
+	border:1px solid black;
+	visibility:hidden;
+}
+
+#tile6 {
+	position:absolute;
+	top:396px;
+	left:523px;
+	width:200px;
+	height:147px;
+	border:1px solid black;
+	visibility:hidden;
+}
+
+
+#grout1 {
+	color:black;
+	border-left:1px solid black;
+	width:0px;
+	height:442px;
+	position:absolute;
+	top:104px;
+	left:523px;
+}
+
+#grout2 {
+	color:black;
+	border-bottom:1px solid black;
+	width:402px;
+	height:0px;
+	position:absolute;
+	top:324px;
+	left:323px;
+	visibility:visible;
+}
+
+#grout3 {
+	color:black;
+	border-bottom:1px solid black;
+	width:402px;
+	height:0px;
+	position:absolute;
+	top:396px;
+	left:323px;
+	visibility:hidden;
+}
+
+
+
+#ResetBtn {
+	margin:auto;
+	position: absolute;
+	bottom: 6px;
+}	
+
+
+table {
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 13;
+}
+
+#ChosenColorBox {
+	width:20px;
+	height:20px;
+	border: 1px solid black;
+	margin: auto;
+	position: relative;
+	left: 73px;
+	bottom: 20px;
+}
+
+
+
+
+#SquareNoInput {
+	width: 32px;
+	height: 35x;
+	font-size: 18;
+}
+
+#GroutSizeInput {
+	width: 32px;
+	height: 35x;
+	font-size: 18;
+}
+
+
+
+/* The following are all the colors */
+
+input[name=RedBtn] {
+	 background-color: rgb(255, 0, 0);
+	 border-color: rgb(255, 0, 0);
+}
+
+input[name=YellowBtn] {
+	 background-color: rgb(255, 255, 0);
+	 border-color: rgb(255, 255, 0);	 
+}
+
+input[name=BlueBtn] {
+	 background-color: rgb(0, 0, 255);
+	 border-color: rgb(0, 0, 255);
+}
+
+input[name=OrangeBtn] {
+	 background-color: rgb(255, 165, 0);
+	 border-color: rgb(255, 165, 0);
+}
+
+input[name=GreenBtn] {
+	 background-color: rgb(0, 255, 0);
+	 border-color: rgb(0, 255, 0);
+}
+
+input[name=PurpleBtn] {
+	 background-color: rgb(160, 32, 240);
+	 border-color: rgb(160, 32, 240);
+}
+
+input[name=MagentaBtn] {
+	 background-color: rgb(255, 0, 200);
+	 border-color: rgb(255, 0, 200);
+}
+
+input[name=VermillionBtn] {
+	 background-color: rgb(227, 66, 52);
+	 border-color: rgb(227, 66, 52);
+}
+
+input[name=VioletBtn] {
+	 background-color: rgb(127, 0, 255);
+	 border-color: rgb(127, 0, 255);	 
+}
+
+input[name=TealBtn] {
+	 background-color: rgb(0, 128, 128);
+	 border-color: rgb(0, 128, 128);	 
+}
+
+input[name=AmberBtn] {
+	 background-color: rgb(255, 191, 0);
+	 border-color: rgb(255, 191, 0);
+}
+
+input[name=ChartreuseBtn] {
+	 background-color: rgb(127, 255, 0);
+	 border-color: rgb(127, 255, 0);
+}
+
+input[name=WhiteBtn] {
+	 background-color: rgb(255, 255, 255);
+	 border-color: rgb(255, 255, 255);
+}
+
+input[name=LightGreyBtn] {
+	 background-color: rgb(211, 211, 211);
+	 border-color: rgb(211, 211, 211);
+}
+
+input[name=BlackBtn] {
+	 background-color: rgb(0, 0, 0);
+	 border-color: rgb(0, 0, 0);
+}
+
+input[name=DarkGreyBtn] {
+	 background-color: rgb(105, 105, 105);
+	 border-color: rgb(105, 105, 105);
+}
+
+input[name=GoldenYellowBtn] {
+	 background-color: rgb(255, 215, 0);
+	 border-color: rgb(255, 215, 0);
+}
+
+input[name=OrangePeelBtn] {
+	 background-color: rgb(255, 159, 0);
+	 border-color: rgb(255, 159, 0);
+}
+
+input[name=PersimmonBtn] {
+	 background-color: rgb(236, 88, 0);
+	 border-color: rgb(236, 88, 0);
+}
+
+input[name=ScarletBtn] {
+	 background-color: rgb(255, 36, 0);
+	 border-color: rgb(255, 36, 0);
+}
+
+input[name=CrimsonBtn] {
+	 background-color: rgb(220, 20, 60);
+	 border-color: rgb(220, 20, 60);	 
+}
+
+input[name=AubergineBtn] {
+	 background-color: rgb(120, 64, 81);
+	 border-color: rgb(120, 64, 81);	 
+}
+
+input[name=AmethystBtn] {
+	 background-color: rgb(134, 96, 142);
+	 border-color: rgb(134, 96, 142);
+}
+
+input[name=IndigoBtn] {
+	 background-color: rgb(75, 0, 130);
+	 border-color: rgb(75, 0, 130);
+}
+
+input[name=TurqoiseBtn] {
+	 background-color: rgb(64, 224, 208);
+	 border-color: rgb(64, 224, 208);
+}
+
+input[name=ViridianBtn] {
+	 background-color: rgb(64, 130, 109);
+	 border-color: rgb(64, 130, 109);
+}
+
+input[name=AppleGreenBtn] {
+	 background-color: rgb(141, 182, 0);
+	 border-color: rgb(141, 182, 0);
+}
+
+input[name=LimeGreenBtn] {
+	 background-color: rgb(191, 255, 0);
+	 border-color: rgb(191, 255, 0);
+}
+
+/* CREATE CUSTOM COLOR */
+
+#customColor {
+	visibility:hidden;
+}
+
+#CustomColorBtn {
+	position:absolute;
+	bottom: 423px;
+	left: 769px;
+} 
+
+#HideCustomColorBtn {
+	position:absolute;
+	bottom: 423px;
+	left: 769px;
+	visibility: hidden;
+}
+
+#customColorBox {
+	border: 1px solid black;
+	width: 300px;
+	height:440px;
+	position: absolute;
+	left: 980px;
+	margin: auto;
+	bottom: 355px;
+	text-align: center;
+}
+
+#customColorHeading {
+	position: absolute;
+	bottom: 730px;
+	left: 1003px;
+}
+
+
+input[name=RedSlider] {
+	position: absolute;
+	bottom: 700px;
+	width: 200px;
+	left: 1000px;
+} 	
+
+input[name=GreenSlider] {
+	position: absolute;
+	bottom: 600px;
+	width: 200px;
+	left: 1000px;
+}
+
+input[name=BlueSlider] {
+	position: absolute;
+	bottom: 500px;
+	width: 200px;
+	left: 1000px;
+
+} 	
+
+#RedValue {
+	position: absolute;
+	bottom: 700px;
+	width: 200px;
+	left: 1230px;
+	font-size: 24px;		
+	color: rgb(255, 0, 0);
+} 	
+
+#GreenValue {
+	position: absolute;
+	bottom: 600px;
+	width: 200px;
+	left: 1230px;
+	font-size: 24px;
+	color: rgb(0, 255, 0);
+} 	
+
+#BlueValue {
+	position: absolute;
+	bottom: 500px;
+	width: 200px;
+	left: 1230px;
+	font-size: 24px;	
+	color: rgb(0, 0, 255);
+} 	
+
+#previewCustomColor {
+	width:259px;
+	height:100px;
+	border: 1px solid black;
+	position: absolute;
+	left: 1000px;
+	bottom: 373px;
+	background-color: black;
+}
+
+#customColorBtn {
+	position: absolute;
+	left: 1085px;
+	top: 500px;
+}
+
+
+/* RANDOMIZER SECTION */
+
+#RandomizerBox {
+	border: 1px solid black;
+	width: 300px;
+	height:440px;
+	position: absolute;
+	left: 980px;
+	margin: auto;
+	bottom: 355px;
+	text-align: center;
+	visibility:hidden;
+}
+	
+#RandomizerBtn {
+	position:absolute;
+	left:769px;
+	bottom:392px;
+}
+
+#HideRandomizerBtn {
+	position:absolute;
+	left:769px;
+	bottom:392px;
+	visibility:hidden;
+}
+
+#RandomizeColorBtn {
+	height: 40px;
+	width: 125px;
+}
+
+#RandomizeChosenColorBtn {
+	height: 40px;
+	width: 125px;	
+}
+
+#RandomizeGroutBtn {
+	height: 40px;
+	width: 125px;
+}
+
+#RandomizeAllBtn {
+	height: 40px;
+	width: 125px;
+}
